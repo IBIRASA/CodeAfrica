@@ -1,0 +1,35 @@
+.custom-button {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: var(--hover-color);
+  }
+  .header-button {
+    padding: 16px 48px;
+    width: 203px;
+    height: 59px;
+    font-size: 16px;
+    gap: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent !important;
+    border: 1px solid var(--primary-color);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease;
+    background-color: var(--primary-color);
+  
+    [data-theme="light"] & {
+      background-color: #DFC986 !important;
+      color: #333 ; 
+    }
+  }
+  

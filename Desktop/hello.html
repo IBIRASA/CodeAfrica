@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row; 
+        }
+        .red {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+        .stacked-divs {
+            display: flex;
+            flex-direction: column; 
+            height: 100px;
+        }
+        .blue, .green {
+            width: 100px;
+            height: 100px;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="red">1</div>
+        <div class="stacked-divs">
+            <div class="blue">2</div>
+            <div class="green">3</div>
+        </div>
+    </div>
+</body>
+</html>

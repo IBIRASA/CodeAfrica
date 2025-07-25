@@ -1,0 +1,274 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.main-content-welcome {
+  width: 1512px;
+  height: 742px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+  background-color: var(--background);
+  background: var(--background) url("../../assets/designs.png") no-repeat center/cover;
+  width: 100%;
+  gap: 20px;
+}
+@media (max-width: 1024px) {
+  .main-content-welcome {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .main-content-welcome {
+    padding: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .main-content-welcome {
+    background: var(--background) url("../../assets/designs.png") no-repeat center/cover;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .main-content-welcome {
+    background: var(--background) url("../../assets/design.png") no-repeat center/cover;
+  }
+}
+.content-left {
+  flex: 1;
+  max-width: 603px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.content-left p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.11px;
+  color: var(--primary-color);
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.content-left h3 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 50px;
+  color: var(--text-primary);
+}
+
+.content-left .paragraph2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.11px;
+  color: var(--text-secondary);
+}
+
+.content-right {
+  flex: 1;
+  display: grid;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+}
+
+.red {
+  width: 300px;
+  height: 450px;
+}
+
+.blue,
+.green {
+  width: 100%;
+  height: 220px;
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 20px;
+}
+
+img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.stacked-divs {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+  width: 100%;
+}
+
+.job-title {
+  display: flex;
+  align-items: center;
+  line-height: 30px;
+  gap: 10px;
+}
+.job-title h4 {
+  color: var(--text-primary);
+}
+.job-title p {
+  color: var(--text-primary);
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 5%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.job-title div {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-tags {
+  display: flex;
+  line-height: 30px;
+  gap: 20px;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0px 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  background-color: var(--secondary-color);
+  margin-top: 5%;
+}
+
+.salary-posted {
+  line-height: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  width: 100%;
+  color: var(--text-primary);
+  padding: 0;
+  margin-top: 5%;
+}
+
+.job-card {
+  position: relative;
+}
+
+.top-right-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem;
+    height: auto;
+  }
+  .content-left {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  .content-left p {
+    font-size: 16px;
+  }
+  .content-left h3 {
+    font-size: 24px;
+  }
+  .red {
+    width: 80%;
+    height: 350px;
+  }
+  .blue,
+  .green {
+    width: 90%;
+    height: 180px;
+  }
+  .stacked-divs {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .main-image {
+    width: 239px;
+    height: 250px;
+    border-radius: 12px;
+  }
+  .company-logo {
+    width: 40px;
+    height: 40px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .red {
+    width: 70%;
+    height: auto;
+  }
+  .blue,
+  .green {
+    width: 80%;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+  .content-left {
+    text-align: center;
+  }
+  .content-left h3 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .red,
+  .blue,
+  .green {
+    width: 100%;
+    height: auto;
+  }
+  .stacked-divs {
+    flex-direction: column;
+  }
+  .company-logo {
+    width: 35px;
+    height: 35px;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .main-image {
+    width: 100%;
+    height: 308px;
+  }
+}/*# sourceMappingURL=Welcome.css.map */

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Quote App</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h1>Quote</h1>
+        <button onclick="getQuote()" style="padding: 10px 20px; font-size: 16px;">Get a Quote</button>
+        <p id="quote" style="margin-top: 20px; font-size: 20px; font-style: italic;"></p>
+    </div>
+
+    <script>
+        async function getQuote() {
+            const quoteElement = document.getElementById("quote");
+            quoteElement.textContent = "Fetching a quote...";
+            try {
+                const response = await axios.get("https://type.fit/api/quotes");
+                const quotes = response.data;
+                const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+                quoteElement.textContent = `"${randomQuote.text}" - ${randomQuote.author || "Unknown"}`;
+            } catch {
+                quoteElement.textContent = "Failed to fetch a quote. Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+classDiagram
+    class User {
+        -String id
+        -String username
+        -String email
+        -String password
+        -String resetToken
+        -Date resetTokenExpiry
+        +register(username, email, password)
+        +login(email, password)
+        +requestResetPassword(email)
+        +resetPassword(token, newPassword)
+    }
+    
+    class AuthController {
+        +register(req, res)
+        +login(req, res)
+        +forgotPassword(req, res)
+        +resetPassword(req, res)
+    }
+    
+    AuthController --> User : uses
